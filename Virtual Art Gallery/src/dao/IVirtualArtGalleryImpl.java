@@ -200,48 +200,8 @@ public class IVirtualArtGalleryImpl implements IVirtualArtGallery {
         return list;
     }
 
-  /*  @Override
-    public List<Gallery> searchGallerys(String keyword) {
-        List<Gallery> galleries = new ArrayList<>();
-        try {
-            String sql = "SELECT * FROM Gallery WHERE Name LIKE ? OR Description LIKE ?";
-            PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setString(1, "%" + keyword + "%");
-            stmt.setString(2, "%" + keyword + "%");
-            ResultSet rs = stmt.executeQuery();
+  
 
-            while (rs.next()) {
-                Gallery gallery = new Gallery(
-                    rs.getInt("GalleryID"),
-                    rs.getString("Name"),
-                    rs.getString("Description"),
-                    rs.getString("Location"),
-                    rs.getInt("ArtistID"),
-                    rs.getString("OpeningHours")
-                );
-                galleries.add(gallery);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return galleries;
-    }*/
-
-   /* 
-    @Override
-    public boolean addArtworkToFavorite(int userId, int artworkId) {
-        try {
-            String sql = "INSERT INTO FavoriteArtworks (UserID, ArtworkID) VALUES (?, ?)";
-            PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setInt(1, userId);
-            stmt.setInt(2, artworkId);
-            return stmt.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    } */
-    
     @Override
     public boolean addArtworkToFavorite(int userId, int artworkId) throws UserNotFoundException {
         try {

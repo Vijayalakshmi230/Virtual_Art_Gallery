@@ -19,8 +19,6 @@ public class JT {
         service = new IVirtualArtGalleryImpl();
     }
 
-    // ---------- ARTWORK MANAGEMENT ----------
-
     @Test
     @Order(1)
     void testAddArtwork() {
@@ -51,7 +49,7 @@ public class JT {
         assertTrue(result, "Artwork should be removed successfully");
     }
 
-    // ---------- GALLERY MANAGEMENT ----------
+  
 
     @Test
     @Order(5)

@@ -274,5 +274,7 @@ public class MainModule {
 			}
 
 		} while (choice != 0);
-	}
+		
+		scanner.close();
+	}  
 }
